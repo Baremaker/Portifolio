@@ -1,0 +1,137 @@
+:root {
+  --primary-color: #126782;
+  --secondary-color: #023047;
+  --accent-color: #ffb703;
+  --text-color: #222;
+  --light-bg: #f5f7fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.custom-navbar {
+  background-color: rgba(2, 48, 71, 0.95);
+}
+
+.navbar a:hover {
+  color: var(--accent-color) !important;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(2, 48, 71, 0.85), rgba(18, 103, 130, 0.85)), url('../img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  padding-top: 80px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.tag {
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section h2 {
+  color: var(--secondary-color);
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin-top: 10px;
+}
+
+.skill-card,
+.project-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover,
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+.card h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background-color: #fb8500;
+  border-color: #fb8500;
+  color: white;
+}
+
+.contact-section {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.contact-section h2,
+.contact-section a {
+  color: white;
+}
+
+.contact-section a[href^='mailto'] {
+  font-weight: 700;
+}
+
+.footer {
+  background-color: #011627;
+  color: white;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+}
